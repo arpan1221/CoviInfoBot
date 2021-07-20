@@ -1,0 +1,161 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: pincode
+  examples: |
+    - [744301](numpin)
+    - [792056](numpin)
+    - [804401](numpin)
+    - [494448](numpin)
+    - [362540](numpin)
+    - [403503](numpin)
+    - [125047](numpin)
+    - [192121](numpin)
+    - [583219](numpin)
+    - [682553](numpin)
+    - [400053](numpin)
+    - [793108](numpin)
+    - [797005](numpin)
+    - [609603](numpin)
+    - [301713](numpin)
+    - [635204](numpin)
+    - [799102](numpin)
+    - [246422](numpin)
+    - [533221](numpin)
+    - [786184](numpin)
+    - [140119](numpin)
+    - [396193](numpin)
+    - [110032](numpin)
+    - [370135](numpin)
+    - [175132](numpin)
+    - [831001](numpin)
+    - [682041](numpin)
+    - [484116](numpin)
+    - [795001](numpin)
+    - [796014](numpin)
+    - [761042](numpin)
+    - [140412](numpin)
+    - [737120](numpin)
+    - [500008](numpin)
+    - [201313](numpin)
+    - [734201](numpin)
+
+- intent: status_for_pincode
+  examples: |
+    - Number of cases in [400053](numpin)
+    - Status of covid in [831001](numpin)
+    - Covid cases in [786184](numpin)
+    - Live status in [370135](numpin)
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - ok
+
+- intent: start
+  examples: |
+    - /start
+    - start
+    - /
+
+- intent: ask_news
+  examples: |
+    - What's the current news for covid-19
+    - Latest updates on covid-19
+    - Latest news on covid-19
+    - News
+    - Covid-19
+    - Information on Covid-19
+    - Recent news
+    - Info

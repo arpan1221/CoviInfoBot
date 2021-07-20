@@ -1,0 +1,70 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- pincode:
+    use_entities: true
+- status_for_pincode:
+    use_entities: true
+- thanks:
+    use_entities: true
+- start:
+    use_entities: true
+- ask_news:
+    use_entites: true
+entities:
+- numpin
+slots:
+  numpin:
+    type: rasa.shared.core.slots.FloatSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+    max_value: 1.0
+    min_value: 0.0
+responses:
+  utter_getting_news:
+  - text: Finding the latest news for you!!!
+  utter_intro_greet:
+  - text: Hi! I am the Covid-19 InfoBot, I provide Live Status of the number of cases of Covid based on your area's pincode and answer any queries, provide latest news on Covid-19.
+  utter_ask_pincode:
+  - text: Please enter your area's pincode
+  utter_getting_status:
+  - text: Getting data on Covid Cases for {numpin} ...
+  utter_welcome:
+  - text: Welcome
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- action_get_data
+- action_get_news
+forms: {}
+e2e_actions: []

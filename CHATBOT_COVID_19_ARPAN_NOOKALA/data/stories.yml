@@ -1,0 +1,41 @@
+version: "2.0"
+
+stories:
+- story: start
+  steps: 
+  - intent: start
+  - action: utter_intro_greet
+- story: long
+  steps:
+  - intent: greet
+  - action: utter_ask_pincode
+  - intent: pincode
+  - action: utter_getting_status
+  - action: action_get_data
+  - intent: thanks
+  - action: utter_welcome
+  - action: utter_goodbye
+- story: short
+  steps:
+  - intent: greet
+  - intent: status_for_pincode
+  - action: utter_getting_status
+  - action: action_get_data
+  - intent: thanks
+  - action: utter_welcome
+  - action: utter_goodbye
+- story: new
+  steps:
+  - intent: greet
+  - intent: status_for_pincode
+  - action: utter_getting_status
+  - action: action_get_data
+- story: bye
+  steps:
+  - intent: thanks
+  - action: utter_welcome
+- story : news
+  steps:
+  - intent: ask_news
+  - action: utter_getting_news
+  - action: action_get_news
